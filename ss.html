@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Responsive Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .table-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        thead {
+            background-color: #3498db;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tbody tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tbody tr:last-of-type {
+            border-bottom: 2px solid #3498db;
+        }
+
+        @media screen and (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                display: none;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+
+            td {
+                padding: 15px;
+                text-align: right;
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: calc(100% - 30px);
+                padding: 10px 15px;
+                font-weight: bold;
+                text-align: left;
+                background-color: #3498db;
+                color: #ffffff;
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>رقم العقار</th>
+                <th>اسم العقار</th>
+                <th>الموقع</th>
+                <th>السعر</th>
+                <th>المساحة</th>
+                <th>عدد الغرف</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="رقم العقار">1</td>
+                <td data-label="اسم العقار">فيلا فاخرة</td>
+                <td data-label="الموقع">الرياض</td>
+                <td data-label="السعر">2,000,000 SAR</td>
+                <td data-label="المساحة">500 م²</td>
+                <td data-label="عدد الغرف">5</td>
+            </tr>
+            <tr>
+                <td data-label="رقم العقار">2</td>
+                <td data-label="اسم العقار">شقة حديثة</td>
+                <td data-label="الموقع">جدة</td>
+                <td data-label="السعر">1,200,000 SAR</td>
+                <td data-label="المساحة">200 م²</td>
+                <td data-label="عدد الغرف">3</td>
+            </tr>
+            <tr>
+                <td data-label="رقم العقار">3</td>
+                <td data-label="اسم العقار">بيت تقليدي</td>
+                <td data-label="الموقع">الدمام</td>
+                <td data-label="السعر">850,000 SAR</td>
+                <td data-label="المساحة">300 م²</td>
+                <td data-label="عدد الغرف">4</td>
+            </tr>
+            <tr>
+                <td data-label="رقم العقار">4</td>
+                <td data-label="اسم العقار">مكتب تجاري</td>
+                <td data-label="الموقع">الخبر</td>
+                <td data-label="السعر">1,500,000 SAR</td>
+                <td data-label="المساحة">400 م²</td>
+                <td data-label="عدد الغرف">6</td>
+            </tr>
+            <tr>
+                <td data-label="رقم العقار">5</td>
+                <td data-label="اسم العقار">فيلا عصرية</td>
+                <td data-label="الموقع">مكة</td>
+                <td data-label="السعر">3,000,000 SAR</td>
+                <td data-label="المساحة">600 م²</td>
+                <td data-label="عدد الغرف">7</td>
+            </tr>
+            <tr>
+                <td data-label="رقم العقار">6</td>
+                <td data-label="اسم العقار">شقة صغيرة</td>
+                <td data-label="الموقع">الطائف</td>
+                <td data-label="السعر">750,000 SAR</td>
+                <td data-label="المساحة">150 م²</td>
+                <td data-label="عدد الغرف">2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
